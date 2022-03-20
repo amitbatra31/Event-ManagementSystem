@@ -21,7 +21,6 @@ body {
   background-image: url("images/bg.jpeg");
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 100%;
   z-index: 50;
 }
 .top-wrapper img {
@@ -32,6 +31,22 @@ body {
 .top-heading {
   position: absolute !important;
   top: 15%;
-  left: 25%;
+  left: 25vw;
   background-color: rgb(228, 253, 244);
+}
+.in-heading {
+  margin-inline: 1rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .top-heading {
+    top: 10%;
+    left: 10vw;
+    right: 10vw;
+    font-size: 1rem;
+  }
+  .in-heading {
+    padding: 1rem;
+    margin-inline: 1.2rem;
+  }
 }

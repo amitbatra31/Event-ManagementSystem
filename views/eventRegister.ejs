@@ -1,0 +1,65 @@
+<%-include('navbar')%>
+<title><%=title%></title>
+</head>
+<body>
+    <div class="mx-5 my-3">
+    <h1 class="mb-5">Register your Event</h1>
+    <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form6Example1" class="form-control" />
+              <label class="form-label" for="form6Example1">Name of Event</label>
+            </div>
+          </div>
+          
+        </div>
+      
+        <!-- Text input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form6Example3" class="form-control" />
+          <label class="form-label" for="form6Example3">University Name</label>
+        </div>
+      
+        <!-- Text input -->
+        <div class="row">
+            <div class="form-outline mb-4 col">
+            <input type="text" id="form6Example4" class="form-control" />
+            <label class="form-label" for="form6Example4">Venue of Event</label>
+            </div>
+            <div class="form-outline mb-4 col">
+                <input type="number" id="form6Example2" class="form-control" />
+                <label class="form-label" for="form6Example4">Duration</label>
+            </div>
+        </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form6Example5" class="form-control" />
+          <label class="form-label" for="form6Example5">Contact Email</label>
+        </div>
+      
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+          <input type="number" id="form6Example6" class="form-control" />
+          <label class="form-label" for="form6Example6">Contact Number</label>
+        </div>
+      
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+          <label class="form-label" for="form6Example7">Additional information</label>
+        </div>
+      
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked />
+          <label class="form-check-label" for="form6Example8"> I agree to all the terms and conditions? </label>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Host event</button>
+      </form>
+    </div>
+      <%- include('footer') %> 
+</body>
