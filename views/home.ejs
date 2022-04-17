@@ -2,7 +2,9 @@
     <title><%=title%></title>
   </head>
   <body>
-    <%-include('navbar')%>
+    <%- include('navbar',{signedIN:signedIN, 
+      if(usrDetails){ usrDetails:usrDetails }
+   })%>
     <div class="top-wrapper">
       <div>
         <img src="images/bg.jpeg" alt="" class="img-fluid opacity-75" />
@@ -10,7 +12,7 @@
       <div class="top-heading p-4 card rounded rounded-10">
         <div class="text-center in-heading">
           <div class="d-flex justify-content-center align-items-center">
-            <div class="">
+            <div class="card-text">
               <h1 class="mb-3">Manage Events Like Never Before</h1>
               <h5 class="mb-4">
                 Best and easiest solution to manage all events in one place

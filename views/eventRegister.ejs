@@ -1,15 +1,17 @@
-<%-include('navbar')%>
+<%- include('navbar',{signedIN:signedIN, 
+  if(usrDetails){ usrDetails:usrDetails }
+})%>
 <title><%=title%></title>
 </head>
 <body>
     <div class="mx-5 my-3">
     <h1 class="mb-5">Register your Event</h1>
-    <form>
+    <form action="eventRegister" method="POST">
         <!-- 2 column grid layout with text inputs for the first and last names -->
         <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form6Example1" class="form-control" />
+              <input type="text" id="form6Example1" class="form-control" name="name" />
               <label class="form-label" for="form6Example1">Name of Event</label>
             </div>
           </div>
@@ -18,36 +20,39 @@
       
         <!-- Text input -->
         <div class="form-outline mb-4">
-          <input type="text" id="form6Example3" class="form-control" />
-          <label class="form-label" for="form6Example3">University Name</label>
+          <input type="text" id="form6Example3" class="form-control" name="hostInstitute"/>
+          <label class="form-label" for="form6Example3" >University Name</label>
         </div>
-      
+        <div class="form-outline mb-4 w-50">
+          <input type="text" id="form6Example3" class="form-control" name="about"/>
+          <label class="form-label" for="form6Example3" >About</label>
+        </div>
         <!-- Text input -->
         <div class="row">
             <div class="form-outline mb-4 col">
-            <input type="text" id="form6Example4" class="form-control" />
+            <input type="text" id="form6Example4" class="form-control" name="venue"/>
             <label class="form-label" for="form6Example4">Venue of Event</label>
             </div>
             <div class="form-outline mb-4 col">
-                <input type="number" id="form6Example2" class="form-control" />
+                <input type="text" id="form6Example2" class="form-control" name="duration"/>
                 <label class="form-label" for="form6Example4">Duration</label>
             </div>
         </div>
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="form6Example5" class="form-control" />
+          <input type="email" id="form6Example5" class="form-control" name="email" />
           <label class="form-label" for="form6Example5">Contact Email</label>
         </div>
       
         <!-- Number input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form6Example6" class="form-control" />
+          <input type="number" id="form6Example6" class="form-control" name="number"/>
           <label class="form-label" for="form6Example6">Contact Number</label>
         </div>
       
         <!-- Message input -->
         <div class="form-outline mb-4">
-          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+          <textarea class="form-control" id="form6Example7" rows="4" name="details"></textarea>
           <label class="form-label" for="form6Example7">Additional information</label>
         </div>
       

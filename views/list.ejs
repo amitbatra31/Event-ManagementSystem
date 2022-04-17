@@ -1,4 +1,6 @@
-<%-include('navbar')%>
+<%- include('navbar',{signedIN:signedIN, 
+  if(usrDetails){ usrDetails:usrDetails }
+})%>
 <title><%=title%></title>
 </head>
 <body>
@@ -24,26 +26,27 @@
                 </tr>
               </thead>
               <tbody>
+                  <%listData.map(row=>{ %>
                 <tr scope="row">
     
                   
                           
                           <td>
-                            1392
+                            <%=row.id%>
                           </td>
-                          <td><a href="#">HackDTU</a></td>
+                          <td><a href="#"><%=row.name%></a></td>
                           <td>
-                            Web Designer
-                            <small class="d-block">Far far away, behind the word mountains</small>
+                            <%=row.About%>
+                            <!-- <small class="d-block">Far far away, behind the word mountains</small> -->
                           </td>
-                          <td>1 day</td>
-                          <td>+63 983 0962 971</td>
-                          <td>NY University</td>
+                          <td><%=row.Duration%></td>
+                          <td><%=row.contactNumber%></td>
+                          <td><%=row.hostInstitute%></td>
                           <td><a href="#" class="more">Details</a></td>
                 
                 </tr>
-    
-                <tr>
+              <%})%>  
+                <!-- <tr>
                   
                   <td>4616</td>
                   <td><a href="#">Hackit</a></td>
@@ -121,7 +124,7 @@
                   <td>+92 020 3994 929</td>
                   <td>College</td>
                   <td><a href="#" class="more">Details</a></td>
-                </tr>
+                </tr> -->
                 
               </tbody>
             </table>
