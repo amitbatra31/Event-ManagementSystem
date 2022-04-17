@@ -17,10 +17,10 @@ app.use(express.static(__dirname + "/public"));
 const mysql = require("mysql");
 const db = mysql.createConnection({
   host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "scott123",
-  database: "evmsDB",
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 });
 
 require("./routes/bookings")(app, db);
